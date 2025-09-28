@@ -16,7 +16,7 @@ import ListShows from "./pages/admin/ListShows";
 import ListBookings from "./pages/admin/ListBookings";
 
 const App = () => {
-  const isAdminRoute = useLocation().pathname.includes("/admin");
+  const isAdminRoute = useLocation().pathname.includes("admin");
 
   return (
     <>
