@@ -16,7 +16,7 @@ import ListShows from "./pages/admin/ListShows";
 import ListBookings from "./pages/admin/ListBookings";
 
 const App = () => {
-  const isAdminRoute = useLocation().pathname.startsWith("/admin");
+  const isAdminRoute = useLocation().pathname.includes("/admin");
 
   return (
     <>
@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/favorite" element={<Favorite />} />
 
         {/* Admin Routes with nested children */}
-        <Route path="/admin/*" element={<Layout />}>
+        <Route path="/admin" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="add-shows" element={<AddShows />} />
           <Route path="list-bookings" element={<ListBookings />} />
